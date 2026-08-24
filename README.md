@@ -1,6 +1,6 @@
-# 🚗 Smart Parking System Using STM32
+# Smart Parking System Using STM32
 A two-floor smart parking management system based on the **STM32 Nucleo-C031C6** microcontroller. The system uses IR sensors to detect vehicle presence, servo motors to control parking gates, and an I2C LCD to display parking-slot availability.
-## 📌 Project Overview
+## Project Overview
 The Smart Parking System is designed to automatically monitor parking spaces and control vehicle entry.
 The system contains:
 * 2 parking floors
@@ -13,7 +13,7 @@ The system contains:
 * STM32 Nucleo-C031C6 microcontroller
 * UART interface for debugging
 The system checks the availability of parking slots and directs vehicles to an available floor.
-## 🎯 Objectives
+## Objectives
 * Automatically detect available and occupied parking slots.
 * Display the number of available slots on an LCD.
 * Automatically open and close the parking gate.
@@ -21,7 +21,7 @@ The system checks the availability of parking slots and directs vehicles to an a
 * Prevent vehicles from entering when all parking slots are occupied.
 * Develop the complete system using an STM32 microcontroller.
 * Demonstrate an embedded-system-based smart parking application.
-## ⚙️ Main Features
+##  Main Features
 ### Floor 1
 * 3 parking slots
 * 3 IR slot sensors
@@ -47,7 +47,7 @@ When all slots are occupied:
 ```text
 PARKING FULL
 NO SPACE
-## 🧰 Hardware Components
+## Hardware Components
 | Component           |    Quantity |
 | ------------------- | ----------: |
 | STM32 Nucleo-C031C6 |           1 |
@@ -58,7 +58,7 @@ NO SPACE
 | Breadboard          |           1 |
 | External 5V Supply  |           1 |
 | USB Cable           |           1 |
-## 🔌 System Architecture
+## System Architecture
 ```text
                    ┌─────────────────────┐
                    │   STM32 Nucleo      │
@@ -75,7 +75,7 @@ NO SPACE
               │               │
               ▼               ▼
         Parking Slots      Gate Control
-## 🅿️ Parking Layout
+## Parking Layout
 ### Floor 1
 ```text
        FLOOR 1
@@ -99,7 +99,7 @@ NO SPACE
              IR GATE
                │
              SERVO
-## 🔢 Pin Configuration
+## Pin Configuration
 The following pin assignment can be used as the starting configuration in STM32CubeMX.
 | Device            | STM32 Pin | Mode       |
 | ----------------- | --------- | ---------- |
@@ -118,7 +118,7 @@ The following pin assignment can be used as the starting configuration in STM32C
 | UART TX           | PA2       | UART       |
 | UART RX           | PA3       | UART       |
 > **Note:** Verify the available alternate functions and pin mapping in STM32CubeMX for the exact Nucleo-C031C6 configuration before physically wiring the second servo PWM channel.
-## 🔄 Working Principle
+## Working Principle
 1. The STM32 initializes GPIO, I2C, UART and PWM peripherals.
 2. The IR sensors continuously monitor the six parking slots.
 3. The STM32 determines whether each slot is occupied or free.
@@ -131,7 +131,7 @@ The following pin assignment can be used as the starting configuration in STM32C
 10. If both floors are full, the LCD displays `PARKING FULL`.
 11. When the vehicle passes the gate, the servo closes the gate.
 12. Slot occupancy is continuously updated.
-## 🧠 Control Algorithm
+## Control Algorithm
 START
   │
   ▼
@@ -175,14 +175,14 @@ Vehicle Detected?
  │             Open Gate    PARKING FULL
  │
  └──────────────► Repeat
-## 💻 Software Requirements
+## Software Requirements
 * STM32CubeIDE
 * STM32CubeMX
 * STM32 HAL Library
 * ST-LINK
 * USB Cable
 * Serial Terminal (optional)
-## 📂 Project Structure
+## Project Structure
 smart-parking-stm32/
 ├── README.md
 │
@@ -218,7 +218,7 @@ smart-parking-stm32/
 │
 ├── .gitignore
 └── LICENSE
-## 🖥️ STM32CubeIDE Configuration
+## STM32CubeIDE Configuration
 The project uses:
 * MCU: **STM32C031C6**
 * GPIO inputs for IR sensors
@@ -234,7 +234,7 @@ Typical pulse widths:
 ~1.5 ms → 90°
 ~2.0 ms → 180°
 The exact values should be calibrated for the servo being used.
-## 📺 Example LCD Output
+## Example LCD Output
 ### Normal Condition
 SMART PARKING
 F1:2 F2:3
@@ -247,7 +247,7 @@ CHECK FLOOR 2
 PARKING FULL
 NO SPACE
 ---
-## 🧪 Testing
+## Testing
 The system should be tested under the following conditions:
 | Test                             | Expected Result             |
 | -------------------------------- | --------------------------- |
@@ -259,7 +259,7 @@ The system should be tested under the following conditions:
 | Vehicle detected at gate         | Gate servo opens            |
 | Vehicle passes gate              | Gate servo closes           |
 ---
-## 🚀 Future Improvements
+## Future Improvements
 Possible future versions can include:
 * IoT monitoring
 * Blynk mobile application
@@ -273,7 +273,7 @@ Possible future versions can include:
 * Web dashboard
 * Solar-powered parking system
 ---
-## 📸 Project Images
+## Project Images
 Add your actual hardware photographs inside the `Images` folder.
 Recommended images:
 ```text
@@ -285,11 +285,11 @@ Images/
 └── parking-model.jpg
 ```
 ---
-## 👨‍💻 Author
+## Author
 **V. Mohan Vamsi Krishna**
 ECE | Embedded Systems | IoT | STM32
 ---
-## ⭐ Project
-If you find this project useful, consider giving the repository a ⭐.
+## Project
+If you find this project useful, consider giving the repository .
 
 This project is intended for educational and academic purposes.
