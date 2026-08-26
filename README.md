@@ -1,6 +1,6 @@
 # Smart Parking System Using STM32
 A two-floor smart parking management system based on the **STM32 Nucleo-C031C6** microcontroller. The system uses IR sensors to detect vehicle presence, servo motors to control parking gates, and an I2C LCD to display parking-slot availability.
-## Project Overview
+## Project Overview 
 The Smart Parking System is designed to automatically monitor parking spaces and control vehicle entry.
 The system contains:
 * 2 parking floors
